@@ -29,6 +29,10 @@ spring:
     url: jdbc:mariadb://database-2.ch0kog84exlz.ap-northeast-2.rds.amazonaws.com:3306/Trendy_Devs
     username: Trendy_Devs
     password: koreait123
+  servlet:
+    multipart:
+      max-file-size: 5MB #파일 용량 제한
+      max-request-size: 10MB # 전체 최대 크기 용량 제한
 
   # jpa
   jpa:

@@ -1,6 +1,7 @@
 package com.example.healthylife.service.Impl;
 
 import com.example.healthylife.entity.UserEntity;
+import com.example.healthylife.mapping.UserInfoMapping;
 import com.example.healthylife.repository.UserRepository;
 import com.example.healthylife.service.UserService;
 import lombok.extern.slf4j.Slf4j;
@@ -19,11 +20,13 @@ public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
+    private final UserInfoMapping userInfoMapping;
 
     @Autowired
-    public UserServiceImpl(UserRepository userRepository, PasswordEncoder passwordEncoder) {
+    public UserServiceImpl(UserRepository userRepository, PasswordEncoder passwordEncoder, UserInfoMapping userInfoMapping) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
+        this.userInfoMapping = userInfoMapping;
     }
 
     //회원 전체조회

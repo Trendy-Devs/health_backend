@@ -55,6 +55,10 @@ dependencies {
 //    implementation group: 'commons-io', name: 'commons-io', version: '2.9.0'
     implementation 'com.google.guava:guava:33.1.0-jre'
 
+    // AWS S3
+    implementation 'org.springframework.cloud:spring-cloud-starter-aws:2.2.6.RELEASE'
+
+
 }
 
 tasks.named('test') {
